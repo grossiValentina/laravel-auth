@@ -12,7 +12,7 @@
 
                 <div class="mb-3">
                   <label for="titolo" class="form-label">Titolo</label>
-                  <input type="text" class="form-control" id="titolo" name="titolo" value="">
+                  <input type="text" class="form-control" id="titolo" name="titolo">
                 </div>
 
                 <div class="mt-3 mb-3">
