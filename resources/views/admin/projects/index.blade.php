@@ -11,6 +11,7 @@
                 <th scope="col">id</th>
                 <th scope="col">Titolo</th>
                 <th scope="col">Descrizione</th>
+                <th scope="col">Selezione</th>
             </tr>
         </thead>
         <tbody>
@@ -20,6 +21,9 @@
                     <th scope="row">{{ $project->id }}</th>
                     <td>{{ $project->titolo }}</td>
                     <td>{{ $project->descrizione }}</td>
+                    <td>
+                        <a class="btn btn-success" href="{{ route('admin.projects.show', ['project' => $project->slug]) }}">Dettagli</a>
+                    </td>
                 </tr>
             @endforeach
 
