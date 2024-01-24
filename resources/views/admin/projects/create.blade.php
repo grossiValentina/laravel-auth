@@ -12,12 +12,17 @@
 
                 <div class="mb-3">
                   <label for="titolo" class="form-label">Titolo</label>
-                  <input type="text" class="form-control" id="titolo" name="titolo">
+                  <input type="text" class="form-control" id="titolo" name="titolo" value="{{ old('titolo') }}">
+
+                  @error('titolo')
+                  <div class="text-danger">inserisci di nuovo il titolo</div>
+                  @enderror
+
                 </div>
 
                 <div class="mt-3 mb-3">
                     <label for="descrizione" class="form-label">Descrizione</label>
-                    <textarea class="form-control" name="descrizione" id="descrizione" rows="3"></textarea>
+                    <textarea class="form-control" name="descrizione" id="descrizione" rows="3">{{ old('descrizione') }}</textarea>
                 </div>
 
                 <button class="btn btn-success mt-4" type="submit" >Salva</button>
