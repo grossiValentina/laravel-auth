@@ -15,6 +15,8 @@
                     <th scope="col">Titolo</th>
                     <th scope="col">Descrizione</th>
                     <th scope="col">Selezione</th>
+                    <th scope="col"></th>
+                    
                 </tr>
             </thead>
             <tbody>
@@ -27,6 +29,10 @@
                         <td>
                             <a class="btn btn-success"
                                 href="{{ route('admin.projects.show', ['project' => $project->slug]) }}">Dettagli</a>
+                        </td>
+                        <td>
+                            <a class="btn btn-warning"
+                                href="{{ route('admin.projects.edit', ['project' => $project->slug]) }}">Modifica</a>
                         </td>
                     </tr>
                 @endforeach
