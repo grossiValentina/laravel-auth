@@ -5,23 +5,14 @@
 <div class="container">
     <h2 class="text-center p-3">Modifica un Progetto</h2>
 
-    @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ( $errors->all() as $error )
-                <li>
-                     {{ $error }}
-                </li>
-            @endforeach
-        </ul>
-    </div>
-        
-    @endif
+    
 
     <div class="row pt-3">
         <div class="col-6">
 
-            <form class="mb-3" action="{{ route('admin.projects.update', ['project' => $project->slug]) }}">
+            <form class="mb-3" action="{{ route('admin.projects.update', ['project' => $project->slug]) }}" method="POST">
+                @csrf
+                @method('PUT')
 
                 <div class="mb-3">
                   <label for="titolo" class="form-label">Titolo</label>
